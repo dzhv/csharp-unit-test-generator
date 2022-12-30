@@ -1,0 +1,20 @@
+using Moq;
+
+$NAMESPACE$
+
+[TestFixture]
+public class $TEST_CLASS$ 
+{
+$DEPENDENCY_DEFINITIONS$
+    private $SUT_CLASS$ _sut;
+
+    [SetUp]
+    public void SetUp() 
+    {
+        $DEPENDENCY_INITIALIZATION$
+
+        $SUT_INITIALIZATION$
+    }
+
+    $TEST_METHODS$
+}
