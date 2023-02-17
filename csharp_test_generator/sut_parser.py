@@ -21,7 +21,7 @@ def get_class_name(text: str) -> str:
 def get_dependencies(text: str, class_name: str) -> List[SutDependency]:
     # looks for constructor lines
     # captures argument list such as:
-    # ICrew crew, IFuel fuel, Options options, \n        bool isOperationa
+    # ICrew crew, IFuel fuel, Options options, \n        bool isOperational
     argumentCollections = re.findall(rf"public\s+{class_name}\(([^\)]*)\)", text)    
     if not argumentCollections:
         return []

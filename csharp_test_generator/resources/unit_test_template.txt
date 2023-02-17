@@ -6,7 +6,7 @@ $NAMESPACE$
 [TestFixture]
 public class $TEST_CLASS$ 
 {
-$DEPENDENCY_DEFINITIONS$
+$DEPENDENCY_DECLARATIONS$
     private $SUT_CLASS$ _sut;
 
     [SetUp]

@@ -16,7 +16,7 @@ class TestSutParser:
         assert "Airplane" == actual.class_name
 
     def test_parse_reads_dependencies(self):
-        actual = sut_parser.parse_file(self.file_path)        
+        actual = sut_parser.parse_file(self.file_path)
 
         assert actual.dependencies == [
             SutDependency("ICrew", "crew"),
