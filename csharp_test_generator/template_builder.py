@@ -4,16 +4,16 @@ from typing import List
 def build(template_path: str, view_model: UnitTestViewModel) -> str:
     with open(template_path) as f:
         lines = f.read()
-        return fill(lines, view_model)
+        return _fill(lines, view_model)
 
-def fill(template: str, view_model: UnitTestViewModel) -> str:
+def _fill(template: str, view_model: UnitTestViewModel) -> str:
     return template \
         .replace("$NAMESPACE$", view_model.namespace) \
         .replace("$TEST_CLASS$", view_model.test_class) \
         .replace("$SUT_CLASS$", view_model.sut_class) \
-        .replace("$DEPENDENCY_DECLARATIONS$", join_multiple(view_model.dependency_declarations)) \
-        .replace("$DEPENDENCY_INITIALIZATION$", join_multiple(view_model.dependency_initialization_lines)) \
-        .replace("$SUT_INITIALIZATION$", join_multiple(view_model.sut_initialization_lines))
+        .replace("$DEPENDENCY_DECLARATIONS$", _join_multiple(view_model.dependency_declarations)) \
+        .replace("$DEPENDENCY_INITIALIZATION$", _join_multiple(view_model.dependency_initialization_lines)) \
+        .replace("$SUT_INITIALIZATION$", _join_multiple(view_model.sut_initialization_lines))
 
-def join_multiple(lines: List[str]):
+def _join_multiple(lines: List[str]):
     return '\n'.join(lines)
