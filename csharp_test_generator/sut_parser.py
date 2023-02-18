@@ -11,7 +11,7 @@ def parse_file(file_path: str) -> SutDetails:
 # parses the SUT C# class text
 def _parse(text: str) -> SutDetails:
     class_name = _get_class_name(text)
-    return SutDetails(class_name, "", _get_dependencies(text, class_name))
+    return SutDetails(class_name, "Please.Replace.This", _get_dependencies(text, class_name))
 
 def _get_class_name(text: str) -> str:
      classes = re.findall(rf'public\s+class\s+(\S+)\s', text)
