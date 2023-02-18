@@ -16,4 +16,6 @@ public class $TEST_CLASS$
 
         $SUT_INITIALIZATION$
     }
+
+    $TEST_METHODS$
 }

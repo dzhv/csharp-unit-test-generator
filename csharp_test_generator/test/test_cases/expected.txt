@@ -1,0 +1,23 @@
+using Moq;
+using NUnit.Framework;
+
+namespace My.Airplane.Project;
+
+[TestFixture]
+public class AirplaneTests 
+{
+    private Mock<ICrew> _crew;
+    private Airplane _sut;
+
+    [SetUp]
+    public void SetUp() 
+    {
+        _crew = new Mock<ICrew>();
+var options = ???;
+var isOperational = ???;
+
+        _sut = new Airplane(_crew, options, isOperational);
+    }
+
+    $TEST_METHODS$
+}
